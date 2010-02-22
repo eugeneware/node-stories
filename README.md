@@ -80,24 +80,22 @@ Async Features
 
 Using the async helpers, node-stories will synchronously run your features:
 
-    new Feature('Building and saving a User', function () {
-        Given('A user', function () {
-            user = User.build()
+    new Feature('A passing, async feature', function () {
+        var emitter;
+        Given('An event emitter', function () {
+            emitter = new process.EventEmitter()
         })
-        When('I add an attribute', function () {
-            user.name = 'John'
+        And('A timed, emitted success', function () {
+            setTimeout(function () { emitter.emit('success') }, 1500)
         })
-        And('I save the user', function () {
-            promise = user.save()
+        Then('This step will wait until the block has finished', function () {
+            await(1).pass
+            emitter.addListener('success', function () {
+                passed
+            })
         })
-        Then('It should save the user', function () {
-            await(1).pass.withTimeout(2500)
-
-            promise.addCallback(function () { passed })
-                   .addErrback(function () { failed })
-        })
-        And("This step won't run until the previous one completed", function () {
-            // Assert something else here.
+        And("This step won't run any earlier", function () {
+            // Do some more assertions here.
         })
     })
 
