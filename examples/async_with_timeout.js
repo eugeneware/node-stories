@@ -1,6 +1,6 @@
 process.mixin(require('../lib/story'));
 
-new Feature('A passing story on the example of an Array', function () {
+new Feature('A feature that will timeout', function () {
     Given('A promise that never emits a success', function () {
         promise = new process.Promise()
     })

@@ -1,6 +1,6 @@
 process.mixin(require('../lib/story'));
 
-new Feature('A passing story on the example of an Array', function () {
+new Feature('A failing story on the example of an Array', function () {
     var assert = require("assert");
 
     Given('An empty Array', function () {

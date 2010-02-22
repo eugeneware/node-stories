@@ -1,6 +1,6 @@
 process.mixin(require('../lib/story'));
 
-new Feature('A passing story on the example of an Array', function () {
+new Feature('A failing, async feature', function () {
     Given('A promise', function () {
         promise = new process.Promise()
     })
