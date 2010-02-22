@@ -1,5 +1,3 @@
-process.mixin(require('../lib/story'));
-
 new Feature('A failing story on the example of an Array', function () {
     var assert = require("assert");
 

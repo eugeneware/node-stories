@@ -1,8 +1,7 @@
-process.mixin(require('../lib/story'));
-
 new Feature('A feature that will timeout', function () {
+    var emitter;
     Given('A promise that never emits a success', function () {
-        promise = new process.Promise()
+        emitter = new process.EventEmitter()
     })
     Then('This step should timeout after the given delay', function () {
         await(1).pass.withTimeout(500);

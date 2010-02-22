@@ -1,5 +1,3 @@
-process.mixin(require('../lib/story'));
-
 new Feature('Using an Array as a queue', function () {
     var assert = require("assert");
 
