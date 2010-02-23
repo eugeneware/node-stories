@@ -14,9 +14,14 @@ new Feature('Using an Array as a queue', function () {
         element = a.shift()
     })
     Then('I should get the first element from the Array', function () {
-        assert.equal(element, 1);
+        assert.equal(element, 1)
     })
     And('I should have the remaining elements left', function () {
-        assert.equal(a.length, 3);
+        assert.equal(a.length, 3)
+    })
+    But('I should not have the shifted element left', function () {
+        a.forEach(function (e) {
+            assert.notEqual(e, element)
+        })
     })
 })
