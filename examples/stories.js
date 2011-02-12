@@ -1,4 +1,7 @@
-process.mixin(require('../lib/story'));
+var story = require('../lib/story');
+for (var i in story) {
+	global[i] = story[i];
+}
 
 require('./stories/passing');
 require('./stories/failing');
