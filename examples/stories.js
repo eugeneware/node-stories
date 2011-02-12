@@ -1,7 +1,4 @@
-var story = require('../lib/story');
-for (var i in story) {
-	global[i] = story[i];
-}
+Feature = require('../lib/story');
 
 require('./stories/passing');
 require('./stories/failing');
