@@ -1,7 +1,9 @@
+var events = require('events');
+
 new Feature('A passing, async feature', function () {
     var emitter;
     Given('An event emitter', function () {
-        emitter = new process.EventEmitter()
+        emitter = new events.EventEmitter();
     })
     And('A timed emitSuccess', function () {
         setTimeout(function () { emitter.emit('success') }, 1500)
