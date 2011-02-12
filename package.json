@@ -1,6 +1,6 @@
 {
 	"name"			: "stories",
-	"version"		: "v1.0.0",
+	"version"		: "v1.0.3",
 	"description"	: "Given/When/Then integration awesomeness for Node.js",
 	"homepage"		: "http://github.com/nharbour/node-stories",
 	"keywords"		: ["testing", "bdd", "cucumber", "tdd", "test"],
