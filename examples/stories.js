@@ -1,4 +1,4 @@
-Feature = require('../lib/index');
+Feature = require('../lib/story');
 
 require('./stories/passing');
 require('./stories/failing');
