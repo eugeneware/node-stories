@@ -1,0 +1,13 @@
+{
+	"name"			: "stories",
+	"version"		: "v1.0.0",
+	"description"	: "Given/When/Then integration awesomeness for Node.js",
+	"homepage"		: "http://github.com/nharbour/node-stories",
+	"keywords"		: ["testing", "bdd", "cucumber", "tdd", "test"],
+	"author"        : Tobias Svensson <tobiassvn@googlemail.com>",
+	"maintainers"   : ["Eugene Ware <eugene@noblesamurai.com>"],
+	"licenses"      : ["MIT"],
+    "dependencies"  : [],
+	"main"			: "./lib/story",
+	"repository"	: { "type": "git", "url": "git://github.com/nharbour/node-stories.git" }
+}
